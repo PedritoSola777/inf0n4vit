@@ -132,7 +132,7 @@ function handleOption(option) {
     } else if(option === "Consultar el saldo de tu crédito") {
         addBotMessage(`
             <p>
-                Puedes <b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
+                Puedes<b>revisar tu estado de cuenta</b> y descargarlo, solo debes ingresar a <a href="https://micuenta.infonavit.org.mx">Mi Cuenta Infonavit</a> en la sección "Mi crédito"
             </p>
         `);
     } else if(option === "Solicitar un retiro"){

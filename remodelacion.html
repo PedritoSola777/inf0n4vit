@@ -1,16 +1,96 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Estatus</title>
+    <title>Retiro de mi ahorro</title>
     <link rel="icon" href="./assets/img/infonavit.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/botStyles.css">
+
+
+   
+    <style>
+              /* Breadcrumb */
+              .breadcrumb-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px;
+        margin-top: 10px;
+    }
+
+    .breadcrumb {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .breadcrumb a {
+        color: #333;
+        text-decoration: none;
+        margin: 0 5px;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb strong {
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    .breadcrumb::before {
+        content: '›';
+        margin: 0 5px;
+    }
+
+    .breadcrumb a::before {
+        content: '›';
+        margin: 0 5px;
+    }
+
+    .breadcrumb a:first-child::before {
+        content: '';
+        margin: 0;
+    }
+
+
+
+    .breadcrumb2 {
+        font-size: 14px;
+        color: #333;
+        text-align: right;
+    }
+
+    .breadcrumb2 a:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb2 strong {
+        font-weight: geomanist-regular;
+        margin-left: 5px;
+    }
+
+    .breadcrumb2 a:first-child::before {
+        content: '';
+        margin: 0;
+    }
+
+    @media (max-width: 767px) {
+    .breadcrumb2 {
+        display: none;
+    }
+}
+
+
+
+    </style>
 
 </head>
 <body>
-    
-    <!-- Navbar Principal -->
+
     <body>
         <!-- Navbar Principal -->
         <div class="navbar">
@@ -24,12 +104,6 @@
             <button class="menu-button mobile-only" id="menuButton"><img src="./assets/icons/manage_searchRed.png" alt="Menu Icon"></button>
         </div>
         
-        <!-- Menú desplegable para móviles -->
-        
-        
-        <div class="mobile-search mobile-only" id="mobileSearch">
-            <!-- Contenido del menú de búsqueda -->
-        </div>
         
         <!-- Navbar Inferior para Desktop -->
         <nav class="navbar-lower desktop-only">
@@ -136,50 +210,225 @@
                 </div>
             </div>
         </nav>
+        
+        
+        
+        <div class="ahorro">
+            <img src="assets/img/fondo-mi-ahorro.avif" alt="">
+        </div>
+        
+        
+        <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Derechohabientes</a> &gt;
+        <a href="#">Mi ahorro</a> &gt;
+        <strong>Retiro de mi ahorro</strong>
+    </div>
+        
+
+    <div class="breadcrumb2">
+        <strong>Fecha de última actualización o revisión: 23 de noviembre 2023</strong>
+    </div>
+        
+        
+        
+        <div class="container">
+        <center>
+            <h1><b>¿En qué consiste?</b></h1>
+        </center>
+        <p>
+            Este programa del Gobierno de la República permite a los trabajadores que cotizan o han cotizado para el seguro social y han generado ahorros en su cuenta de Afore y en la subcuenta de vivienda, acceder a retirar una parte de estos ahorros para realizar construcciones menores en su vivienda o remodelarla.
+        </p>
+        
+        <div class="services-section">
+            <img src="assets/img/casa.png" alt="Servicios Crezcamos Juntos" class="small-height-desktop">
+            <div class="services-info">
+                <h2>¿Qué puedo hacer en mi casa con este programa?</h2>
+                <ul class="service-list">
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Demolición de concreto, losa o muros.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Suministro y colocación de accesorios eléctricos, focos, contactos, medidores, etc.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Instalación hidráulica de conexión de la red municipal a la cisterna.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Pintura en muros, plafones, barandales y rejas.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Instalación de puertas y ventanas de aluminio o herrería.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Colocación de muebles de baño (Incluye la instalación hidráulica y tuberías). 
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Aplanado fino con pasta o yeso.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Levantamiento de muros de block hueco o macizo de concreto o tabicón macizo de concreto (incluyendo aplanados).
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Aplanado fino de muros con mezcla de cemento y arena.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Construcción de base de tinaco con muros de tabique y losa de concreto.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Construcción de cisterna prefabricada de hasta 2500 litros (Incluye el armado de acero, cimbra y descimbra, excavaciones, muros, aplanados y registros).
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Construcción de rampa para escalera y escalones de tabique o concreto.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Registros sanitarios a base de tabique (incluye aplanados y tapa metálica).
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Instalación hidráulica del tinaco a los muebles de baño y/o la vivienda en general.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Instalación hidráulica para elevación de agua de cisterna a tinaco.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Colocación de azulejo en muros, pisos y baños.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Colocación de loseta cerámica o vinílica sobre piso.
+                    </li>
+                    <li>
+                        <img src="assets/icons/check_circle.png" alt="Check Icon" class="icon">
+                        Impermeabilización en azotea.
+                    </li>
+
+                </ul>
+                <a href="form.html">
+                    <button class="btn-primary">Solicitar mi retiro</button>
+                </a>
+
+                <a href="tramite.html">
+                <button class="btn-primary">Consultar mi trámite</button>
+                </a>
 
 
-        <!-- Formulario de Datos -->
-        <!-- Formulario de Datos -->
-    <div class="form-container">
-        <h2>Formulario de Contacto</h2>
-        <form id="userForm" action="./DataBase/conexion.php" method="POST">
-            <div class="form-group">
-                <input type="text" id="nombre" name="nombre" required>
-                <label for="nombre">Nombre</label>
-                <div class="bar"></div>
+                
             </div>
+        </div>
 
-            <div class="form-group">
-                <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
-                <label for="apellidoPaterno">Apellido Paterno</label>
-                <div class="bar"></div>
-            </div>
+        <br>
 
-            <div class="form-group">
-                <input type="text" id="apellidoMaterno" name="apellidoMaterno" required>
-                <label for="apellidoMaterno">Apellido Materno</label>
-                <div class="bar"></div>
-            </div>
+        <div class="devolucion">
 
-            <div class="form-group">
-                <input type="email" id="email" name="email" required>
-                <label for="email">Correo Electrónico</label>
-                <div class="bar"></div>
-            </div>
+            <center>
+                <h3><b>Devolución a Beneficiarios</b></h3>
+            </center>
+    
+            <p>
+                <b>Devolución del Fondo de Ahorro 1972-1992</b>
+                 <br><br>
+                En caso de ser beneficiario(a) (único o múltiple) de una persona derechohabiente que contaba con saldo
+                en el Fondo de Ahorro 72-92, ingresa al servicio de Devolución de <b class="fondoText" style="color: red;">Fondo de Ahorro </b>  y sigue las instrucciones
+                que ahí se te indican.
 
-            <div class="form-group">
-                <input type="text" id="telefono" name="telefono" required>
-                <label for="telefono">Número de Teléfono</label>
-                <div class="bar"></div>
-            </div>
+                <br><br>
 
-            <button type="submit" class="btn-submit">Verificar</button>
-        </form>
+                Para realizar este trámite es necesario que cuentes con un laudo o resolución judicial donde se determina la sentencia
+                a tu favor como beneficiario(a) para el pago de recursos.
+            </p>
+
+            <p>
+                <b>Devolución de la Subcuenta de Vivienda 1992 y 1997</b>
+                <br><br>
+
+                Si eres beneficiario reconocido ante el IMSS, no requieres  la designación de beneficiarios emitida por los Tribunales federales en materia laboral.
+                <br><br> 
+                Para tramitarlo, solo debes ingresar al servicio de <b class="fondoText" style="color: red;">Devolución del saldo de la Subcuenta de Vivienda</b> y seguir las indicaciones.
+                <br><br>
+                En caso de que no seas beneficiario(a) legal (cónyuge, descendiente, ascendiente o concubino(a)), y que no cuentes con dictamen de pensión del titular finado(a), para que acredites que eres beneficiario(a), puedes presentar una <b style="color: dimgrey;">resolución de designación de beneficiarios</b> emitida por los Tribunales federales en materia laboral.
+                Consulta más información.
+                
+                
+
+            </p>
+    
+        </div>
+
+
     </div>
 
-    <script src="assets/JS/form.js"></script>
-    <script src="./assets/JS/main.js"></script>
+
+    <!-- Chat Icon and Window -->
+<div class="chat-icon" id="chatIcon">
+    <img src="./assets/icons/chat.png" alt="Chat Icon">
+</div>
+<div class="chat-window" id="chatWindow" style="display: none;">
+    <div class="chatbot">
+        <div id="chatbot-messages" class="chatbot-messages">
+            <div class="loading-text">Cargando asistente virtual...</div>
+        </div>
+        <div id="user-input" class="user-input">
+            <input type="text" id="userMessage" placeholder="Escribe tu mensaje...">
+            <button id="sendButton">Enviar</button>
+        </div>
+    </div>
+</div>
+
+
+    <script src="assets/JS/main.js"></script>
+    <script src="assets/JS/bot.js"></script>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <center>
     
+                    <p>Derechos reservados © Infonavit 2017</p>
+                </center>
+            </div>
+            <div class="footer-right">
+                <img src="assets/icons/infonavit_W.png" alt="" class="social-icon">
+    
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var navbarLower = document.getElementById('navbarLower');
+            if (navbarLower.classList.contains('open')) {
+                navbarLower.classList.remove('open');
+            } else {
+                navbarLower.classList.add('open');
+            }
+        });
+    
+        document.getElementById('dropdownIcon').addEventListener('click', function() {
+            var dropdownMenu = document.getElementById('dropdownMenu');
+            if (dropdownMenu.classList.contains('open')) {
+                dropdownMenu.classList.remove('open');
+            } else {
+                dropdownMenu.classList.add('open');
+            }
+        });
+        </script>
 
 </body>
 </html>
