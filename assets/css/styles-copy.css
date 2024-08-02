@@ -1,0 +1,501 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para el icono de chat y la ventana emergente */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #D1001F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.chat-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.chat-icon:hover {
+    background-color: #a8001a;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.services-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.services-section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.services-info {
+    flex: 1;
+}
+
+.services-info h2 {
+    font-size: 22px;
+    color: #D1001F;
+}
+
+.services-info ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.services-info ul li {
+    margin-bottom: 10px;
+}
+
+.service-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.service-list li img.icon {
+    margin-right: 10px;
+    width: 24px; /* Ajusta el tamaño según tus necesidades */
+    height: 24px;
+}
+
+.btn-primary {
+    background-color: #D1001F;
+    color: white;
+    border: 2px solid #D1001F;
+    padding: 6px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #a8001a;
+}
+
+.services-info a {
+    color: #D1001F;
+    text-decoration: none;
+}
+
+.register-link {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Navbar Principal */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.login-button {
+    background-color: #D1001F;
+    color: white;
+    border: none;
+    padding: 6px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.login-button:hover {
+    background-color: #a8001a;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Navbar Inferior */
+.navbar-lower {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-lower.open {
+    display: flex;
+}
+
+.navbar-lower .menu-section {
+    margin-bottom: 20px;
+}
+
+.navbar-lower .menu-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #D1001F;
+    margin-bottom: 10px;
+}
+
+.navbar-lower .menu-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-lower .menu-items a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-lower .menu-items a:hover {
+    background-color: #FF0000;
+    color: white;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 5px;
+}
+
+.menu-button img{
+    width: 35px;
+    height: auto;
+}
+
+/* Estilos para centrar imágenes en image-movement */
+.image-movement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 500px; /* Altura ajustada para un buen espacio de renderización */
+    overflow: hidden;
+    background-color: #f0f0f0; /* Color de fondo opcional */
+}
+
+.image-movement img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Estilos para las cards */
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Color de fondo del contenedor de las tarjetas */
+    margin-top: 20px; /* Espacio entre las tarjetas y la navbar inferior */
+    text-align: center; /* Centra el texto del título */
+}
+
+.text-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cards-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    width: 200px; /* Ancho de cada tarjeta */
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo de cada tarjeta */
+    color: black; /* Establece un color de texto inicial */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Alinea el texto y la imagen al centro */
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para todos los cambios en hover */
+    margin: 10px; /* Añade margen entre las tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Animación de la tarjeta */
+    background-color: #FF0000; /* Cambio de color de fondo en hover */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más prominente en hover */
+}
+
+.card img {
+    width: 50px; /* Ajusta este valor según el tamaño deseado de las imágenes */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.card p {
+    font-size: 14px; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina los márgenes por defecto */
+}
+
+/* Estilos Generales del Formulario */
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #D1001F;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #D1001F;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #D1001F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #a8001a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:active {
+    background-color: #860016;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de Material Design */
+.form-group input:focus ~ label,
+.form-group select:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group select:not(:placeholder-shown) ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    color: #D1001F;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-bottom: 2px solid #D1001F;
+    padding-bottom: 8px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out, font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.form-group input:focus ~ .bar:before,
+.form-group select:focus ~ .bar:before,
+.form-group textarea:focus ~ .bar:before {
+    transform: scaleX(1);
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    background: #D1001F;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.bar:before {
+    left: 0;
+    width: 100%;
+}
+
+/* Ocultar el botón "Acceder a mi cuenta" en móviles */
+.mobile-hidden {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .navbar, .navbar-lower {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-items, .navbar-lower .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-items a, .navbar-lower a {
+        margin: 5px 0;
+    }
+
+    .login-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-button {
+        display: block;
+    }
+    .navbar .login-button {
+        display: none;
+    }
+}
